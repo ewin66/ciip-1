@@ -119,9 +119,14 @@ namespace CIIP.DashBoard.Templates {
                     _saveDashboard = result == DialogResult.Yes;
             }
         }
-
-        private TDashboardBarButtonItem GetBarItem<TDashboardBarButtonItem>() where TDashboardBarButtonItem : DashboardBarButtonItem{
-            return ((RibbonControl) _dashboardDesigner.MenuManager).Items.OfType<TDashboardBarButtonItem>().First();
+        
+        ////private TDashboardBarButtonItem GetBarItem<TDashboardBarButtonItem>() where TDashboardBarButtonItem : DashboardBarButtonItem
+        ////{
+        ////    return ((RibbonControl)_dashboardDesigner.MenuManager).Items.OfType<TDashboardBarButtonItem>().First();
+        ////}
+        private TDashboardBarButtonItem GetBarItem<TDashboardBarButtonItem>() where TDashboardBarButtonItem : DashboardCommandBarButtonItem
+        {
+            return ((RibbonControl)_dashboardDesigner.MenuManager).Items.OfType<TDashboardBarButtonItem>().First();
         }
 
         void DashboardDesignerForm_Load(object sender, EventArgs e) {

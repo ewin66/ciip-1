@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIIP.Module", "CIIP.Module\CIIP.Module.csproj", "{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}"
 EndProject
@@ -26,6 +26,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIIP.Dashboard", "CIIP.Dashboard\CIIP.Dashboard.csproj", "{1E9501B3-A97D-4667-A434-F19F0AF6B110}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIIP.Icon", "CIIP.Icon\CIIP.Icon.csproj", "{11754553-E0C7-4C0A-9B4C-52249C67DF7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admiral.ImportData.Core", "Admiral.ImportData.Core", "{63F4DBBD-AEC2-4E49-AF3C-5A1C2FF9D3D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admiral.ImportData", "..\Admiral.ImportData\Admiral.ImportData\Admiral.ImportData.csproj", "{C05EA8DC-F315-4A0D-A9C7-269C515457FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admiral.ImportData.Web", "..\Admiral.ImportData\Admiral.ImportData.Web\Admiral.ImportData.Web.csproj", "{A4D76742-6044-4E55-82DF-BDF3EA8129AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admiral.ImportData.Win", "..\Admiral.ImportData\Admiral.ImportData.Win\Admiral.ImportData.Win.csproj", "{1ECDF975-9640-4F7F-98E2-C73223005655}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,6 +108,24 @@ Global
 		{11754553-E0C7-4C0A-9B4C-52249C67DF7C}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{11754553-E0C7-4C0A-9B4C-52249C67DF7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11754553-E0C7-4C0A-9B4C-52249C67DF7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05EA8DC-F315-4A0D-A9C7-269C515457FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05EA8DC-F315-4A0D-A9C7-269C515457FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05EA8DC-F315-4A0D-A9C7-269C515457FF}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{C05EA8DC-F315-4A0D-A9C7-269C515457FF}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{C05EA8DC-F315-4A0D-A9C7-269C515457FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05EA8DC-F315-4A0D-A9C7-269C515457FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D76742-6044-4E55-82DF-BDF3EA8129AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D76742-6044-4E55-82DF-BDF3EA8129AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D76742-6044-4E55-82DF-BDF3EA8129AB}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{A4D76742-6044-4E55-82DF-BDF3EA8129AB}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{A4D76742-6044-4E55-82DF-BDF3EA8129AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D76742-6044-4E55-82DF-BDF3EA8129AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECDF975-9640-4F7F-98E2-C73223005655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECDF975-9640-4F7F-98E2-C73223005655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECDF975-9640-4F7F-98E2-C73223005655}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{1ECDF975-9640-4F7F-98E2-C73223005655}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{1ECDF975-9640-4F7F-98E2-C73223005655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECDF975-9640-4F7F-98E2-C73223005655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,8 +137,12 @@ Global
 		{2380464F-5516-4F22-869E-AB916B154DF5} = {7A916F4E-A0AD-491B-A91B-79C379F94433}
 		{1E9501B3-A97D-4667-A434-F19F0AF6B110} = {7A916F4E-A0AD-491B-A91B-79C379F94433}
 		{11754553-E0C7-4C0A-9B4C-52249C67DF7C} = {7A916F4E-A0AD-491B-A91B-79C379F94433}
+		{C05EA8DC-F315-4A0D-A9C7-269C515457FF} = {63F4DBBD-AEC2-4E49-AF3C-5A1C2FF9D3D9}
+		{A4D76742-6044-4E55-82DF-BDF3EA8129AB} = {63F4DBBD-AEC2-4E49-AF3C-5A1C2FF9D3D9}
+		{1ECDF975-9640-4F7F-98E2-C73223005655} = {63F4DBBD-AEC2-4E49-AF3C-5A1C2FF9D3D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {7BD32D20-B2D7-4ADE-9BA1-15E88F45DE79}
 	EndGlobalSection
 EndGlobal

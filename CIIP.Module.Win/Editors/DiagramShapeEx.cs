@@ -14,7 +14,8 @@ namespace CIIP.Module.Win.Editors
     {
         public DiagramShapeEx(ShapeDescription shape, int x, int y, int width, int height) : base(shape, x, y, width, height) { }
         protected override IDiagramItemView CreateView(DiagramControlViewInfo viewInfo, DiagramAppearanceObject appearance) {
-            return new DiagramShapeViewEx(DevExpress.XtraDiagram.Native.ShapeParser.Parse(Controller.Shape, appearance), () => viewInfo.OwnerControl.OptionsView.AllowShapeShadows, appearance, Content, RoundToRectangle(ConvertHelper.ToWinRect(Controller.EditorBounds)), this);
+            ////return new DiagramShapeViewEx(DevExpress.XtraDiagram.Native.ShapeParser.Parse(Controller.Shape, appearance), () => viewInfo.OwnerControl.OptionsView.AllowShapeShadows, appearance, Content, RoundToRectangle(ConvertHelper.ToWinRect(Controller.EditorBounds)), this);
+            return new DiagramShapeViewEx(DevExpress.XtraDiagram.Native.ShapeParser.Parse(Controller.Shape, appearance), () => viewInfo.OwnerControl.OptionsView.AllowShapeShadows, appearance, Content, RoundToRectangle(ConvertHelper.ToWinRect(Controller.EditorBounds)), () => viewInfo.OwnerControl.OptionsView.AllowShapeShadows, this);
         }
 
         public Rectangle RoundToRectangle(RectangleF rect) {
@@ -41,8 +42,11 @@ namespace CIIP.Module.Win.Editors
         RectangleF TextBounds;
         DiagramShapeEx Shape;
 
-        public DiagramShapeViewEx(IEnumerable<DiagramGraphicsPath> paths, Func<bool> allowDrawShadows, AppearanceObject textAppearance, string text, RectangleF textBounds, DiagramShapeEx shape)
-            : base(paths, allowDrawShadows, textAppearance, text, textBounds) {
+        //zjh 20200704//public DiagramShapeViewEx(IEnumerable<DiagramGraphicsPath> paths, Func<bool> allowDrawShadows, AppearanceObject textAppearance, string text, RectangleF textBounds, DiagramShapeEx shape)
+        public DiagramShapeViewEx(IEnumerable<DiagramGraphicsPath> paths, Func<bool> allowDrawShadows, AppearanceObject textAppearance, string text, RectangleF textBounds, Func<bool> getIsTextEdit, DiagramShapeEx shape)
+        //zjh 20200704//: base(paths, allowDrawShadows, textAppearance, text, textBounds)
+            : base(paths, allowDrawShadows, textAppearance, text, textBounds, getIsTextEdit)
+        {
             Shape = shape;
             TextBounds = textBounds;
         }
